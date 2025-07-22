@@ -5,24 +5,28 @@ class Cart extends ChangeNotifier{
   // list of products
   List<Product> products = [
     Product(
-      name: "Product 1",
-      description: "Description of Product 1",
-      price: 29.99
+      name: "Pomodoro Timer Clock",
+      description: "A compact timer designed to help you stay focused using the Pomodoro technique for studying",
+      price: 24.99,
+      imagePath: 'assets/pomodoro_timer.png'
     ),
     Product(
-      name: "Product 2",
-      description: "Description of Product 2",
-      price: 49.99,
+      name: "Book Stand",
+      description: "Adjustable, ergonomic book stand made from wood, perfect for holding books or tablets while studying",
+      price: 29.99,
+      imagePath: 'assets/book_stand.png'
     ),
     Product(
-      name: "Product 3",
-      description: "Description of Product 3",
-      price: 19.99,
-    ),
-    Product(
-      name: "Product 4",
-      description: "Description of Product 4",
+      name: "Desk Lamp",
+      description: "LED desk lamp with adjustable positioning, makde for late night reading",
       price: 39.99,
+      imagePath: 'assets/desk_lamp.png'
+    ),
+    Product(
+      name: "Habit Tracker Notebook",
+      description: "Notebook with habit trackers designed to help with tracking daily habits and routines",
+      price: 14.99,
+      imagePath: 'assets/habit_tracker.png'
     ),
   ];
 
