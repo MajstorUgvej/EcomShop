@@ -1,4 +1,5 @@
 import 'package:ecom_shop/models/cart.dart';
+import 'package:ecom_shop/pages/cart_page.dart';
 import 'package:ecom_shop/pages/shop_page.dart';
 import 'package:ecom_shop/pages/start_page.dart';
 import 'package:ecom_shop/themes/light_theme.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/start_page': (context) => const StartPage(),
         '/shop_page': (context) => const ShopPage(),
+        '/cart_page': (context) => const CartPage(),
       },
       
     );

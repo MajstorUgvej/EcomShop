@@ -11,9 +11,9 @@ class StartPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Personal logo
+            //Personal logo
             Icon(
-              Icons.shopping_bag_rounded, 
+              Icons.book, 
               size: 100, 
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
@@ -21,7 +21,7 @@ class StartPage extends StatelessWidget {
 
             // Title
             Text(
-              'Test Shop',
+              'Study Shop',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -30,7 +30,7 @@ class StartPage extends StatelessWidget {
 
             // Subtitle
             Text(
-              'Your one-stop shop for everything',
+              'Your one-stop shop for productivity',
               style: TextStyle(
                 fontSize: 16,
               ),

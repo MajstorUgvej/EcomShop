@@ -8,9 +8,9 @@ class ProductTile extends StatelessWidget {
   @override
   Widget build(context) {
     return Padding(
-      padding: const EdgeInsets.all(25),
+      padding: const EdgeInsets.all(15),
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(15),
         width: 300,
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
@@ -32,7 +32,15 @@ class ProductTile extends StatelessWidget {
                     color: Theme.of(context).colorScheme.secondary,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: Icon(Icons.favorite)
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(
+                      product.imagePath,
+                      color: Theme.of(context).colorScheme.secondary,
+                      colorBlendMode: BlendMode.multiply, 
+                      
+                    ),
+                  ),
                 ),),
                 
                       
@@ -54,7 +62,24 @@ class ProductTile extends StatelessWidget {
             ),
       
             //Product price and add to cart button
-            Text('\$' + product.price.toStringAsFixed(2)),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('\$${product.price.toStringAsFixed(2)}', style: TextStyle(
+                  fontSize: 20,
+                ),),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.secondary,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: TextButton(onPressed: () {
+                    
+                  }, child: Icon(Icons.add, color: Theme.of(context).colorScheme.inversePrimary)),
+                ),
+              ],
+            ),
           ],
         ),
       ),
