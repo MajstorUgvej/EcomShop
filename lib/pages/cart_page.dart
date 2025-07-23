@@ -13,7 +13,10 @@ class CartPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cart"),
+        leading: IconButton(onPressed: () {
+          Navigator.pushNamed(context, '/shop_page');
+        }, icon: const Icon(Icons.arrow_back)),
+        title:const Text("Cart"),
         centerTitle: true,
       ),
       body: cartProducts.isNotEmpty ?
@@ -25,16 +28,16 @@ class CartPage extends StatelessWidget {
                   },);
                 },
               )
-          : Center(child: Text("There is nothing in the cart", style: TextStyle(
+          :const Center(child: Text("There is nothing in the cart", style: TextStyle(
             fontSize: 20,
           ),)),
         
       floatingActionButton: GestureDetector(
         onTap: () {
-          
+          // To checkout page
         },
         child: Container(
-          padding: EdgeInsets.all(15),
+          padding:const EdgeInsets.all(15),
           width: 200,
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.primary,

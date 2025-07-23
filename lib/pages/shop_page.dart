@@ -1,5 +1,4 @@
 import 'package:ecom_shop/models/cart.dart';
-import 'package:ecom_shop/models/product.dart';
 import 'package:ecom_shop/utilities/product_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,9 +17,14 @@ class ShopPage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text("Shop Page"),
+          title: const Text("Shop Page"),
           centerTitle: true,
-          
+          actions: [
+            IconButton(onPressed: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/cart_page');
+            }, icon:const Icon(Icons.shopping_cart_outlined))
+          ],
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
@@ -39,7 +43,7 @@ class ShopPage extends StatelessWidget {
                 color: Theme.of(context).colorScheme.inversePrimary
               )),
               
-              SizedBox(
+             const SizedBox(
                 height: 40,
               ),
           
@@ -77,7 +81,7 @@ class ShopPage extends StatelessWidget {
                     color: Theme.of(context).colorScheme.primary,
                     size: 100
                 ),),
-                Divider(
+                const Divider(
                   height: 30,
                   color: Colors.transparent,
                 ),
@@ -85,7 +89,7 @@ class ShopPage extends StatelessWidget {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Row(
+                  child: const Row(
                     children: [
                       Icon(Icons.shopping_bag_outlined, size: 40),
                       Text("Shop", style: TextStyle(
@@ -94,7 +98,7 @@ class ShopPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Divider(
+                const Divider(
                   height: 10,
                   color: Colors.transparent,
                 ),
@@ -103,23 +107,22 @@ class ShopPage extends StatelessWidget {
                     Navigator.pop(context);
                     Navigator.pushNamed(context, '/cart_page');
                   },
-                  child: Row(
+                  child:const Row(
                     children: [
                       Icon(Icons.shopping_cart_outlined, size: 40),
                       Text("Cart", style: TextStyle(
                         fontSize: 20,
-                      ),)
+                      ),), 
                     ],
                   ),
-                ),
-                  ],
+                ),],
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.pushNamed(context, '/start_page');
                   },
-                  child: Row(
+                  child: const Row(
                     children: [
                       Icon(Icons.logout, size:40),
                       Text("Log out", style: TextStyle(
@@ -135,8 +138,4 @@ class ShopPage extends StatelessWidget {
       ),
     );
   }
-}
-
-extension on List<Product> {
-  void addToCart(Product product) {}
 }
