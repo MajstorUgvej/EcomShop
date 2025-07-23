@@ -38,7 +38,10 @@ class StartPage extends StatelessWidget {
             const SizedBox(height: 40),
             // Go button
             GestureDetector(
-              onTap: () => Navigator.pushNamed(context, '/shop_page'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, '/shop_page');
+              },
               child: Container(
                 padding: EdgeInsets.all(25),
                 decoration:BoxDecoration(

@@ -14,7 +14,7 @@ class CartPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: () {
-          Navigator.pushNamed(context, '/shop_page');
+          Navigator.pushReplacementNamed(context, '/shop_page');
         }, icon: const Icon(Icons.arrow_back)),
         title:const Text("Cart"),
         centerTitle: true,

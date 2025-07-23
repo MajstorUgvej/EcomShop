@@ -104,8 +104,7 @@ class ShopPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
-                    Navigator.pushNamed(context, '/cart_page');
+                    Navigator.pushReplacementNamed(context, '/cart_page');
                   },
                   child:const Row(
                     children: [
@@ -119,8 +118,7 @@ class ShopPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
-                    Navigator.pushNamed(context, '/start_page');
+                    Navigator.pushReplacementNamed(context, '/start_page');
                   },
                   child: const Row(
                     children: [
