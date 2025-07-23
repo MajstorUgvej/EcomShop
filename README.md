@@ -6,7 +6,7 @@ Minimal ecom shop UI made in flutter. It consists of start page where you would 
 
 ## Installation
 
-1. Clone the repository: git clone https://github.com/MajstorUgvej/ToDoApp.git
+1. Clone the repository: git clone https://github.com/MajstorUgvej/StudyShopUI.git
 
 2. Install dependencies: flutter pub get
 
