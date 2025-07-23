@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class ProductTile extends StatelessWidget {
   final Product product;
-  const ProductTile({super.key, required this.product});
+  final VoidCallback addFunction;
+  const ProductTile({super.key, required this.product, required this.addFunction});
 
   @override
   Widget build(context) {
@@ -74,9 +75,7 @@ class ProductTile extends StatelessWidget {
                     color: Theme.of(context).colorScheme.secondary,
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: TextButton(onPressed: () {
-                    
-                  }, child: Icon(Icons.add, color: Theme.of(context).colorScheme.inversePrimary)),
+                  child: TextButton(onPressed: addFunction, child: Icon(Icons.add, color: Theme.of(context).colorScheme.inversePrimary)),
                 ),
               ],
             ),
