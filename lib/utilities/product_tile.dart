@@ -25,7 +25,7 @@ class ProductTile extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AspectRatio(
+              AspectRatio(
                 aspectRatio: 1,
                 child: Container(
                   width: double.infinity,
@@ -45,7 +45,7 @@ class ProductTile extends StatelessWidget {
                 ),),
                 
                       
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 // Product name
                 Text(product.name, style: TextStyle(
                     fontSize: 20,
