@@ -20,7 +20,7 @@ class StartPage extends StatelessWidget {
             SizedBox(height: 20),
 
             // Title
-            Text(
+            const Text(
               'Study Shop',
               style: TextStyle(
                 fontSize: 24,
@@ -29,13 +29,13 @@ class StartPage extends StatelessWidget {
             ),
 
             // Subtitle
-            Text(
+            const Text(
               'Your one-stop shop for productivity',
               style: TextStyle(
                 fontSize: 16,
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             // Go button
             GestureDetector(
               onTap: () => Navigator.pushNamed(context, '/shop_page'),
